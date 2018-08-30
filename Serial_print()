@@ -1,0 +1,16 @@
+
+#include <msp430.h>
+#include <Serial.h>
+
+int main(void)
+{
+  WDTCTL = WDTPW + WDTHOLD;                 // Stop WDT
+  Serial_begin();
+}
+
+
+void Serial_print(unsigned char data)
+{
+    data = UCA1RXBUF;
+    UCA1TXBUF = data;                  // TX -> RXed character
+}
