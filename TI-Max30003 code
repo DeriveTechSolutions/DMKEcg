@@ -1,5 +1,3 @@
-// SPI SCLK @ 8.2Mhz
-// SMCLK @ 8.2Mhz
 #include <msp430.h> 
 #include <stdint.h>
 #include <stdbool.h>
